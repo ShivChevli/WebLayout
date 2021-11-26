@@ -29,6 +29,7 @@
                 <ul>
                     <li><a href="" class="remove-a avtiveLink">Home</a></li>
                     <li><a href="" class="remove-a">Service</a></li>
+                    <li><a href="" class="remove-a">Project</a></li>
                     <li><a href="" class="remove-a">Contact</a></li>
                 </ul>
             </div>
@@ -36,6 +37,7 @@
                 <ul>
                     <li><a href="" class="remove-a">Home</a></li>
                     <li><a href="" class="remove-a">Service</a></li>
+                    <li><a href="" class="remove-a">Project</a></li>
                     <li><a href="" class="remove-a">Contact</a></li>
                 </ul>
             </div>
@@ -51,20 +53,131 @@
     </section>
 
     <section>
-        <div class="container">
-            <h1 class="heading"> <span>About Us</span></h1>
+        <div class="container outerBox">
+            <h1> <span>About Us</span></h1>
 
-            <!-- <div class="dropBox">
-                <div class="dropbox-tab">
+            <div class="dropBox">
+                <div class="dropBox-tab">
                     <ul>
-                        <li>Mission</li>
+                        <li class="avtivaTab">Mission</li>
                         <li>Vision</li>
                         <li>values</li>
                     </ul>
                 </div>
+                <div class="dropBox-content">
+                    <p id="dropBoxText">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi accusamus consequatur architecto
+                        libero officiis ipsa sit quo ea, possimus, velit ipsam explicabo odio eius necessitatibus? Quasi
+                        deserunt hic eius natus?
+                    </p>
+                </div>
             </div>
-        </div> -->
+        </div>
     </section>
+
+
+    <section>
+        <div class="outerBox none">
+            <h1><span>Service</span> </h1>
+
+            <div class="slider">
+                <div class="container">
+                    <span class="arrow align-left">
+                        < </span>
+
+                            <p id="sliderText">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum aliquid voluptas
+                                inventore saepe, quasi sapiente illo optio eos quae soluta minima. Laborum minus
+                                libero magni dignissimos vero eveniet voluptatem omnis.
+                            </p>
+                            <span class="arrow align-right"> > </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="outerBox container">
+            <h1><span> Project</span> </h1>
+            <div class="showCase">
+                <div class="showCaseBox">
+                    <img src="img/project1.jpg" alt="">
+                </div>
+                <div class="showCaseBox">
+                    <img src="img/project2.jpg" alt="">
+                </div>
+                <div class="showCaseBox">
+                    <img src="img/project3.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="outerBox container">
+            <h1> <span>Contect</span> </h1>
+            <form action="https://postmail.invotes.com/send" method="post" id="email_form">
+
+                <input type="text" id="emaiSubject" name="subject" placeholder="Subject" required />
+                <input type="text" id="emailName" name="extra_fullName" placeholder="Full Name" required />
+                <input type="text" id="emailAddress" name="extra_email" placeholder="E-mail Address" required />
+                <textarea name="text" id="emailMassage" placeholder="Message"></textarea>
+                <input type="hidden" name="access_token" value="rfwwqt1xnchxirhu3vxu5p7w" />
+                <!-- return urls can be fully qualified -OR-
+                                        start with / for root relative -OR-
+                                        start with . for url relative -->
+                <input type="hidden" name="success_url" value="https://www.google.com" />
+                <input type="hidden" name="error_url" value="https://www.google.com" />
+
+
+                <!-- set the reply-to address -->
+                <!-- <input type="text" name="reply_to"
+                                                placeholder="Your Email" /> -->
+
+                <!-- to append extra fields, use the extra_ prefix.
+                                        Entries will be appended to your message body. -->
+                <!-- <input type="text" name="extra_phone_number"
+                                                placeholder="Phone Number" /> -->
+
+                <!-- to split your message into 160 chars
+                                        for an sms gateway -->
+                <!-- <input type="hidden"
+                                                name="sms_format" value="true" /> -->
+
+                <input id="submit_form" type="submit" value="Send" />
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="social footerBox">
+                <p class="footerHeading">Follow us</p>
+                <img src="img/social-icons/facebook.svg" alt="">
+                <img src="img/social-icons/instagram.svg" alt="">
+                <img src="img/social-icons/twitter.svg" alt="">
+            </div>
+            <div class="address footerBox">
+                <p class="footerHeading">Location</p>
+                <address>
+                    Lorem ipsum dolor sit <br>
+                    amet consectetur<br>
+                    adipisicing<br>
+                    elit.
+                </address>
+            </div>
+            <div class="address footerBox">
+                <p class="footerHeading">Opening times</p>
+                <p>
+                    Mon-Fri: 11h30 - 24h00<br>
+                    Saturday: 11h30 - 02h00<br>
+                    Sunday: 11h30 - 18h
+                </p>
+            </div>
+            <div class="copyRightBox">
+                <p class="footerHeading"><span class="copyYear">2021</span> © All rights reserved</p>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
