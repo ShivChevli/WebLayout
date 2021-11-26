@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+:root{
+    --bgcolor :#2A2D34;
+    --textColor : #aaa;
+    --avtiveTextColor : #fff;
+    --headingTextColor : #424143;
+}
+
+.remove-a{
+    color:var(--textColor);
+    text-decoration: none;
+}
+.avtiveLink{
+    color: var(--avtiveTextColor);
+    position: relative;
+}
+.avtiveLink::after{
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: #fa0c0f;
+    position: absolute;
+    top: 110%;
+    left: 0;
+}
+header {
+    background-color: var(--bgcolor);
+    height: 100px;
+}
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+.logo-box{
+    padding-left:30px;
+    display: table-cell;
+    vertical-align: middle;
+    width: 300px;
+    height: 100px;
+}
+.logo-box a {
+    color: var(--avtiveTextColor);
+}
+.logo-box a .square{
+    background-color: #fa0c0f;
+}
+.logo-box a h1{
+    vertical-align: middle;
+}
+.lg-menue-button{
+    padding-right: 30px;
+    display: table-cell;
+    vertical-align: middle;
+    width: 500px;
+    width: 80%;
+    height: 100px;
+    text-align: right;
+}
+.lg-menue-button ul{
+    display: block;
+}
+.lg-menue-button ul li{
+    display: inline-block;
+}
+.lg-menue-button ul li a{
+    padding: 10px 20px;
+    font-weight: lighter;
+    font-size: 18px;
+}
+.lg-menue-button .bar{
+    display: none;
+    margin: 0 20px;
+    cursor: pointer;
+}
+.sm-menue-button{
+    display: none;
+    position: fixed;
+    top: 100px;
+    right: 0;
+    z-index: 10;
+    width: 350px;
+    height: 100%;
+    background-color:var(--bgcolor);
+}
+.sm-menue-button ul{
+    list-style: none;
+    width: 100%;
+    text-align: center;
+}
+.sm-menue-button ul li a{
+    display: block;
+    padding: 20px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    /* margin: 0 50px; */
+}
+@media screen and (min-width:0px) and (max-width:768px) {
+    .lg-menue-button .bar{
+       width: 100px;
+        display: block;
+        text-align: center;
+    } 
+    .lg-menue-button ul {
+        display: none;
+    }
+    .logo-box{
+        text-align: center;
+        width: 90%;
+    }
+    .sm-menue-button{
+        display: block;
+    }
+}
+
+/* ==============================================================
+                Home Image Section
+============================================================== */
+.home{
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+.home img{
+    transform: translate(-50%,-50%);
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+}
+.home .quate{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:var(--avtiveTextColor);
+    background: rgba(0, 0, 0,0.5);
+    backdrop-filter: blur(2px);
+}
+.home .quate h1{
+    font-size: 3em;
+    line-height: 1.5em;
+}
+.home .quate h2{
+    font-size: 1.7em;
+    font-weight:100;
+}
+
+/* ==============================================================
+                About Us Section
+============================================================== */
+
+section .container{
+    padding: 100px 50px 20px;
+    color: var(--headingTextColor);
+}
+section .container h1{
+    text-align: center;
+    margin-bottom:50px ;
+}
+section .container span{
+    font-size: 1.5em;
+    position: relative;
+}
+section .container span::after{
+    content: "";
+    background: #fa0c0f;
+    position: absolute;
+    top: 130%;
+    left: 50%;
+    width: 50%;
+    height: 5px;
+    transform: translateX(-50%);
+}
+
+
+.dropBox{
+    margin: 0px auto;
+    width: 1000px;
+    height: 300px;
+    background: var(--textColor);
+}
+
+.dropBox .dropbox-tab ul li{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    background: var(--bgcolor);
+}
