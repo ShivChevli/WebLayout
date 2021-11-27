@@ -16,19 +16,23 @@
     text-decoration: none;
 }
 .avtiveLink{
-    color: var(--avtiveTextColor);
+    color: var(--avtiveTextColor) !important;
     position: relative;
 }
 .avtiveLink::after{
     content: "";
-    width: 100%;
+    width: 80%;
     height: 4px;
     background-color: #fa0c0f;
     position: absolute;
     top: 110%;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 header {
+    position: sticky;
+    top: 0;
+    z-index: 100000;
     background-color: var(--bgcolor);
     height: 100px;
 }
@@ -38,7 +42,7 @@ header {
     margin: 0 auto;
 }
 .logo-box{
-    padding-left:30px;
+    padding-left:3%;
     display: table-cell;
     vertical-align: middle;
     width: 300px;
@@ -57,7 +61,6 @@ header {
     padding-right: 30px;
     display: table-cell;
     vertical-align: middle;
-    width: 500px;
     width: 80%;
     height: 100px;
     text-align: right;
@@ -67,11 +70,11 @@ header {
 }
 .lg-menue-button ul li{
     display: inline-block;
-}
-.lg-menue-button ul li a{
+    color: var(--textColor);
     padding: 10px 20px;
-    font-weight: lighter;
+    font-weight: 600;
     font-size: 18px;
+    cursor: pointer;
 }
 .lg-menue-button .bar{
     display: none;
@@ -93,14 +96,16 @@ header {
     width: 100%;
     text-align: center;
 }
-.sm-menue-button ul li a{
-    display: block;
+.sm-menue-button ul li {
+    color: var(--textColor);
+    /* display: block; */
     padding: 20px 20px;
     font-size: 18px;
     font-weight: 600;
+    cursor: pointer;
     /* margin: 0 50px; */
 }
-@media screen and (min-width:0px) and (max-width:768px) {
+@media screen and (min-width:0px) and (max-width:775px) {
     .lg-menue-button .bar{
        width: 100px;
         display: block;
@@ -113,9 +118,6 @@ header {
         text-align: center;
         width: 90%;
     }
-    .sm-menue-button{
-        display: block;
-    }
 }
 
 /* ==============================================================
@@ -126,6 +128,7 @@ header {
     background-size: cover;
     background-position: center;
     width: 100%;
+    overflow: hidden;
     height: 600px;
     position: relative;
 }
@@ -194,8 +197,9 @@ section .outerBox h1 span::after{
 ============================================================================ */
 .dropBox{
     margin: 0px auto;
-    width: 1000px;
-    height: 300px;
+    max-width: 1000px;
+    width: 100%;
+    /* height: 200px; */
     background: var(--bgcolor);
 }
 .dropBox .dropBox-tab{
@@ -234,15 +238,30 @@ section .outerBox h1 span::after{
 }
 .slider .container{
     position: relative;
-    padding: 0 100px;
-    padding-top: 70px;
+    padding: 20px 100px;
+}
+
+.sliderBox{
+    margin: 10px auto;
+    width: 90%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
 }
 #sliderText{
+    text-align: center;
+    display: block;
+    padding: 20px;
+    width: 100%;
     font-size: 18px !important;
+    position: absolute;
+    top: 0px;
+    z-index: 100;
 }
 .arrow{
     height: 200px;
-    width: 50px;
+    width: 10%;
+    font-family: 'Poppins', sans-serif;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -251,6 +270,9 @@ section .outerBox h1 span::after{
     cursor: pointer;
     position: absolute;
     top: 0;
+    font-size: 32px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
 }
 .align-right{
     right: 0;
@@ -261,9 +283,12 @@ section .outerBox h1 span::after{
 /* ================================================================================
                             Project 
 ================================================================================ */
+.showCase{
+    text-align: center;
+}
 .showCaseBox{
     display: inline-block;
-    margin: 3px;
+    margin: 20px 3px;
     width: 390px;
     height: 390px;
     border-radius: 20px;
@@ -297,10 +322,11 @@ section .outerBox h1 span::after{
     font-size: 18px;
 }
 #submit_form{
-    width: fit-content !important;
-    padding: 10px 50px !important;
+    width: 300px !important;
+    padding: 15px 50px !important;
     border-radius: 5px;
     font-weight: 600;
+    font-size: 20px !important;
     background-color: var(--headingTextColor);
     color: var(--avtiveTextColor);
     border: 2px solid #fff;
@@ -324,6 +350,7 @@ footer .container{
 footer .footerBox{
     width:400px ;
     display: table-cell;
+    padding: 0 50px;
 }
 footer .footerHeading{
     font-size: 20px;
@@ -334,4 +361,51 @@ footer .copyRightBox{
     margin-top: 30px;
     text-align: center;
     border-top: 3px solid #fff;
+}
+
+/* ==========================================================
+            Slider effects
+========================================================== */
+.dataIn-animation{
+    /* animation: dataIn 1s linear; */
+    animation : dataIn 2s cubic-bezier(0.93, -0.06, 0.14, 0.99)
+}
+@keyframes dataIn {
+    0%{
+        opacity: 1;
+        left: 0;
+    }
+    45%{
+        opacity: 0;
+        left: -100%;
+    }
+    55%{
+        opacity: 0;
+        left: 200%;    
+    }
+    100%{
+        opacity: 1;
+        left: 0;
+    }
+}
+.dataOut-animation{
+    animation : dataOut 2s cubic-bezier(0.93, -0.06, 0.14, 0.99)
+}
+@keyframes dataOut {
+    0%{
+        opacity: 1;
+        right: 0;
+    }
+    45%{
+        opacity: 0;
+        right: -100%;
+    }
+    55%{
+        opacity: 0;
+        right: 200%;    
+    }
+    100%{
+        opacity: 1;
+        right: 0;
+    }
 }

@@ -26,25 +26,40 @@
                 <div id="bar-button" class="bar">
                     <img src="img/menu/hamburguer.svg" alt="">
                 </div>
-                <ul>
-                    <li><a href="" class="remove-a avtiveLink">Home</a></li>
-                    <li><a href="" class="remove-a">Service</a></li>
-                    <li><a href="" class="remove-a">Project</a></li>
-                    <li><a href="" class="remove-a">Contact</a></li>
+                <!-- <ul>
+                    <li><a href="index.html#home" class="remove-a avtiveLink">Home</a></li>
+                    <li><a href="index.html#aboutUs" class="remove-a">About US</a></li>
+                    <li><a href="index.html#service" class="remove-a">Service</a></li>
+                    <li><a href="index.html#project" class="remove-a">Project</a></li>
+                    <li><a href="index.html#contact" class="remove-a">Contact</a></li>
+                </ul> -->
+                <ul class="nevigation">
+                    <li class="avtiveLink" data-linkId="0">Home</li>
+                    <li data-linkId="1">About US</li>
+                    <li data-linkId="2">Service</li>
+                    <li data-linkId="3">Project</li>
+                    <li data-linkId="4">Contact</li>
                 </ul>
             </div>
             <div class="sm-menue-button">
-                <ul>
+                <!-- <ul>
                     <li><a href="" class="remove-a">Home</a></li>
                     <li><a href="" class="remove-a">Service</a></li>
                     <li><a href="" class="remove-a">Project</a></li>
                     <li><a href="" class="remove-a">Contact</a></li>
+                </ul> -->
+                <ul class="sm-nevigation">
+                    <li class="avtiveLink" data-linkId="0">Home</li>
+                    <li data-linkId="1"><span>About US</span></li>
+                    <li data-linkId="2">Service</li>
+                    <li data-linkId="3">Project</li>
+                    <li data-linkId="4">Contact</li>
                 </ul>
             </div>
         </div>
     </header>
 
-    <section class="home">
+    <section class="home" id="home">
         <img src="img/webdesign1.jpg" alt="">
         <div class="quate">
             <h1>We are WeDesign!</h1>
@@ -52,23 +67,24 @@
         </div>
     </section>
 
-    <section>
+    <section id="aboutUs">
         <div class="container outerBox">
             <h1> <span>About Us</span></h1>
 
             <div class="dropBox">
                 <div class="dropBox-tab">
                     <ul>
-                        <li class="avtivaTab">Mission</li>
-                        <li>Vision</li>
-                        <li>values</li>
+                        <li class="avtivaTab" data-heading="Mission">Mission</li>
+                        <li data-heading="Vision">Vision</li>
+                        <li data-heading="Values">values</li>
                     </ul>
                 </div>
                 <div class="dropBox-content">
                     <p id="dropBoxText">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi accusamus consequatur architecto
-                        libero officiis ipsa sit quo ea, possimus, velit ipsam explicabo odio eius necessitatibus? Quasi
-                        deserunt hic eius natus?
+                        Mission :- Lorem ipsum dolor sit amet consectetur adipisicing elit.Modi accusamus consequatur
+                        architecto libero officiis
+                        ipsa sit quo ea, possimus, velit ipsam explicabo odio eius necessitatibus ? Quasi deserunt hic
+                        eius natus ?
                     </p>
                 </div>
             </div>
@@ -76,27 +92,31 @@
     </section>
 
 
-    <section>
+    <section id="service">
         <div class="outerBox none">
             <h1><span>Service</span> </h1>
 
             <div class="slider">
                 <div class="container">
-                    <span class="arrow align-left">
+                    <span id="left-arrow" class="arrow align-left">
                         < </span>
-
-                            <p id="sliderText">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum aliquid voluptas
-                                inventore saepe, quasi sapiente illo optio eos quae soluta minima. Laborum minus
-                                libero magni dignissimos vero eveniet voluptatem omnis.
-                            </p>
-                            <span class="arrow align-right"> > </span>
+                            <div class="sliderBox">
+                                <p id="sliderText">
+                                    A :- Lorem ipsum dolor sit amet consectetur adipisicing elit.Modi accusamus
+                                    consequatur
+                                    architecto libero officiis ipsa
+                                    sit quo ea, possimus, velit ipsam explicabo odio eius necessitatibus ? Quasi
+                                    deserunt
+                                    hic eius natus ?
+                                </p>
+                            </div>
+                            <span id="right-arrow" class="arrow align-right"> > </span>
                 </div>
             </div>
         </div>
     </section>
 
-    <section>
+    <section id="project">
         <div class="outerBox container">
             <h1><span> Project</span> </h1>
             <div class="showCase">
@@ -113,7 +133,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="contact">
         <div class="outerBox container">
             <h1> <span>Contect</span> </h1>
             <form action="https://postmail.invotes.com/send" method="post" id="email_form">
@@ -174,10 +194,11 @@
                 </p>
             </div>
             <div class="copyRightBox">
-                <p class="footerHeading"><span class="copyYear">2021</span> © All rights reserved</p>
+                <p class="footerHeading"><span id="copyYear">2021</span> <sup>&copy;</sup> All rights reserved</p>
             </div>
         </div>
     </footer>
 </body>
+<script src="js/mainScript.js"></script>
 
 </html>
