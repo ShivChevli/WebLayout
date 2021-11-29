@@ -1,4 +1,4 @@
-var val = ['home', 'aboutUs', 'service', 'project', 'contact']
+var val = ['home', 'service', 'aboutUs', 'project', 'contact']
 var arr = [];
 val.forEach(li => {
     arr.push(document.getElementById(li).offsetTop - 100);
