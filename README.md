@@ -9,4 +9,16 @@ link to Website :- [https://shivchevli.github.io/WebLayout/](https://shivchevli.
 <br>
 
 
-![alt text](img/WebLayout.jpeg)
+![Destop view Layout](img/WebLayout.jpeg)
+
+<hr>
+<br>
+<center>
+
+## Mobile View 
+
+<br><br>
+
+![Mobile view Layout](img/WebLayout-mobileView.jpeg)
+
+</center>
