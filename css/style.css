@@ -105,6 +105,9 @@ header {
     cursor: pointer;
     /* margin: 0 50px; */
 }
+#close{
+    display: none;
+}
 @media screen and (min-width:0px) and (max-width:775px) {
     .lg-menue-button .bar{
        width: 100px;

@@ -42,13 +42,21 @@ temp1.forEach(li => {
         selectActivationLink(id);
         window.scrollTo(0, arr[id] + 10);
         document.querySelector(".sm-menue-button").style.display = "none";
-        document.querySelector("#bar-button img").src = "img/menu/hamburguer.svg";
+        document.getElementById("close").style.display = "none";
+        document.getElementById("menue").style.display = "block";
     }
 });
 
-document.getElementById("bar-button").onclick = function () {
-    document.querySelector("#bar-button img").src = "img/menu/close.svg";
+document.getElementById("menue").onclick = function () {
+    this.style.display = "none";
+    document.getElementById("close").style.display = "block";
     document.querySelector(".sm-menue-button").style.display = "block";
+}
+
+document.getElementById("close").onclick = function () {
+    this.style.display = "none";
+    document.getElementById("menue").style.display = "block";
+    document.querySelector(".sm-menue-button").style.display = "none";
 }
 
 
@@ -70,29 +78,29 @@ document.querySelectorAll(".dropBox-tab li").forEach(li => {
 
 //Slider 
 let sliderData = [
-    "A :- Lorem ipsum dolor sit amet consectetur adipisicing elit.Modi accusamus consequatur architecto libero officiis ipsa sit quo ea, possimus, velit ipsam explicabo odio eius necessitatibus ? Quasi deserunt hic eius natus ?",
-    "B :- Lorem ipsum dolor sit amet consectetur adipisicing elit.Modi accusamus consequatur architecto libero officiis ipsa sit quo ea, possimus, velit ipsam explicabo odio eius necessitatibus ? Quasi deserunt hic eius natus ?",
-    "C :- Lorem ipsum dolor sit amet consectetur adipisicing elit.Modi accusamus consequatur architecto libero officiis ipsa sit quo ea, possimus, velit ipsam explicabo odio eius necessitatibus ? Quasi deserunt hic eius natus ?",
+    "Data 1 :- Lorem ipsum dolor sit amet consectetur adipisicing elit.Modi accusamus consequatur architecto libero officiis ipsa sit quo ea, possimus, velit ipsam explicabo odio eius necessitatibus ? Quasi deserunt hic eius natus ?",
+    "Data 2 :- Lorem ipsum dolor sit amet consectetur adipisicing elit.Modi accusamus consequatur architecto libero officiis ipsa sit quo ea, possimus, velit ipsam explicabo odio eius necessitatibus ? Quasi deserunt hic eius natus ?",
+    "Data 3 :- Lorem ipsum dolor sit amet consectetur adipisicing elit.Modi accusamus consequatur architecto libero officiis ipsa sit quo ea, possimus, velit ipsam explicabo odio eius necessitatibus ? Quasi deserunt hic eius natus ?",
 ]
 let i = 1;
 let slider = document.getElementById("sliderText");
 async function sliderLeft() {
+    if (i > 3) {
+        i = 0;
+    }
     slider.classList.add("dataIn-animation");
     setTimeout(() => slider.innerText = sliderData[i], 500);
     setTimeout(() => slider.classList.remove("dataIn-animation"), 5000);
     i++;
-    if (i == 3) {
-        i = 0;
-    }
 }
 function sliderRight() {
+    if (i < 0) {
+        i = 3;
+    }
     slider.classList.add("dataOut-animation");
     setTimeout(() => slider.innerText = sliderData[i], 500);
     setTimeout(() => slider.classList.remove("dataOut-animation"), 5000);
     i--;
-    if (i == -1) {
-        i = 3;
-    }
 }
 let d = setInterval(() => {
     console.log("Timer Run");
