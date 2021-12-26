@@ -345,6 +345,7 @@ section .outerBox h1 span::after{
 footer{
     color: var(--avtiveTextColor);
     background: var(--bgcolor);
+    overflow-x: hidden;
     /* height: 400px; */
 }
 footer .container{
